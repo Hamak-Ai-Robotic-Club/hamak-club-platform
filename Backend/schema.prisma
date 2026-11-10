@@ -1,0 +1,211 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Component {
+  id              BigInt              @id @default(autoincrement())
+  name            String              @db.Text
+  category        String              @db.Text
+  description     String?             @db.Text
+  workingQuantity Int                 @map("working_quantity")
+  brokenQuantity  Int                 @map("broken_quantity")
+  status          String              @db.Text
+  createdAt       DateTime            @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime            @updatedAt @map("updated_at") @db.Timestamptz(6)
+  movements       InventoryMovement[]
+  requestItems    RequestItem[]
+
+  @@map("components")
+}
+
+model User {
+  id                 BigInt              @id @default(autoincrement())
+  accountType        String?             @map("account_type") @db.Text
+  displayName        String?             @map("display_name") @db.Text
+  isActive           Boolean             @default(true) @map("is_active")
+  createdAt          DateTime            @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt          DateTime            @updatedAt @map("updated_at") @db.Timestamptz(6)
+  sessions           Session[]
+  submittedRequests  Request[]           @relation("RequestSubmitter")
+  reviewedRequests   Request[]           @relation("RequestReviewer")
+  deliveries         Delivery[]          @relation("DeliveryActor")
+  returns            Return[]            @relation("ReturnActor")
+  inventoryMovements InventoryMovement[] @relation("MovementActor")
+  auditLogs          AuditLog[]          @relation("AuditActor")
+  hackathonSummaries HackathonSummary[]  @relation("SummaryCreator")
+
+  @@map("users")
+}
+
+model Session {
+  id        BigInt    @id @default(autoincrement())
+  userId    BigInt    @map("user_id")
+  tokenHash String    @unique @map("token_hash") @db.Text
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  expiresAt DateTime  @map("expires_at") @db.Timestamptz(6)
+  revokedAt DateTime? @map("revoked_at") @db.Timestamptz(6)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@index([userId, expiresAt])
+  @@map("sessions")
+}
+
+model Team {
+  id        BigInt    @id @default(autoincrement())
+  name      String    @db.Text
+  isActive  Boolean   @default(true) @map("is_active")
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  requests  Request[]
+
+  @@map("teams")
+}
+
+model Request {
+  id                 BigInt        @id @default(autoincrement())
+  teamId             BigInt        @map("team_id")
+  submittedByUserId  BigInt?       @map("submitted_by_user_id")
+  reviewedByUserId   BigInt?       @map("reviewed_by_user_id")
+  projectName        String?       @map("project_name") @db.Text
+  projectDescription String?       @map("project_description") @db.Text
+  status             String        @db.Text
+  submittedAt        DateTime?     @map("submitted_at") @db.Timestamptz(6)
+  reviewedAt         DateTime?     @map("reviewed_at") @db.Timestamptz(6)
+  cancelledAt        DateTime?     @map("cancelled_at") @db.Timestamptz(6)
+  team               Team          @relation(fields: [teamId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  submittedBy        User?         @relation("RequestSubmitter", fields: [submittedByUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  reviewedBy         User?         @relation("RequestReviewer", fields: [reviewedByUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  items              RequestItem[]
+  deliveries         Delivery[]
+
+  @@index([teamId, submittedAt])
+  @@index([status, submittedAt])
+  @@map("requests")
+}
+
+model RequestItem {
+  id                BigInt         @id @default(autoincrement())
+  requestId         BigInt         @map("request_id")
+  componentId       BigInt         @map("component_id")
+  requestedQuantity Int            @map("requested_quantity")
+  approvedQuantity  Int            @default(0) @map("approved_quantity")
+  request           Request        @relation(fields: [requestId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  component         Component      @relation(fields: [componentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  deliveryItems     DeliveryItem[]
+
+  @@unique([id, requestId])
+  @@index([requestId])
+  @@index([componentId])
+  @@map("request_items")
+}
+
+model Delivery {
+  id                BigInt         @id @default(autoincrement())
+  requestId         BigInt         @map("request_id")
+  deliveredByUserId BigInt?        @map("delivered_by_user_id")
+  deliveredAt       DateTime       @default(now()) @map("delivered_at") @db.Timestamptz(6)
+  request           Request        @relation(fields: [requestId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  deliveredBy       User?          @relation("DeliveryActor", fields: [deliveredByUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  items             DeliveryItem[]
+
+  @@unique([id, requestId])
+  @@index([requestId, deliveredAt])
+  @@map("deliveries")
+}
+
+model DeliveryItem {
+  id                BigInt              @id @default(autoincrement())
+  deliveryId        BigInt              @map("delivery_id")
+  requestId         BigInt              @map("request_id")
+  requestItemId     BigInt              @map("request_item_id")
+  deliveredQuantity Int                 @map("delivered_quantity")
+  delivery          Delivery            @relation(fields: [deliveryId, requestId], references: [id, requestId], onDelete: Restrict, onUpdate: Cascade)
+  requestItem       RequestItem         @relation(fields: [requestItemId, requestId], references: [id, requestId], onDelete: Restrict, onUpdate: Cascade)
+  returnItems       ReturnItem[]
+  movements         InventoryMovement[]
+
+  @@index([deliveryId])
+  @@index([requestItemId])
+  @@map("delivery_items")
+}
+
+model Return {
+  id               BigInt       @id @default(autoincrement())
+  receivedByUserId BigInt?      @map("received_by_user_id")
+  returnedAt       DateTime     @default(now()) @map("returned_at") @db.Timestamptz(6)
+  receivedBy       User?        @relation("ReturnActor", fields: [receivedByUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  items            ReturnItem[]
+
+  @@index([returnedAt])
+  @@map("returns")
+}
+
+model ReturnItem {
+  id              BigInt              @id @default(autoincrement())
+  returnId        BigInt              @map("return_id")
+  deliveryItemId  BigInt              @map("delivery_item_id")
+  workingQuantity Int                 @map("working_quantity")
+  brokenQuantity  Int                 @map("broken_quantity")
+  return          Return              @relation(fields: [returnId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  deliveryItem    DeliveryItem        @relation(fields: [deliveryItemId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  movements       InventoryMovement[]
+
+  @@index([returnId])
+  @@index([deliveryItemId])
+  @@map("return_items")
+}
+
+model InventoryMovement {
+  id             BigInt        @id @default(autoincrement())
+  componentId    BigInt        @map("component_id")
+  actorUserId    BigInt?       @map("actor_user_id")
+  deliveryItemId BigInt?       @unique @map("delivery_item_id")
+  returnItemId   BigInt?       @map("return_item_id")
+  movementType   String        @map("movement_type") @db.Text
+  quantityBucket String        @map("quantity_bucket") @db.Text
+  quantityDelta  Int           @map("quantity_delta")
+  occurredAt     DateTime      @default(now()) @map("occurred_at") @db.Timestamptz(6)
+  notes          String?       @db.Text
+  component      Component     @relation(fields: [componentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  actor          User?         @relation("MovementActor", fields: [actorUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  deliveryItem   DeliveryItem? @relation(fields: [deliveryItemId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  returnItem     ReturnItem?   @relation(fields: [returnItemId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@unique([returnItemId, quantityBucket])
+  @@index([componentId, occurredAt])
+  @@index([actorUserId, occurredAt])
+  @@map("inventory_movements")
+}
+
+model AuditLog {
+  id          BigInt   @id @default(autoincrement())
+  actorUserId BigInt?  @map("actor_user_id")
+  entityType  String   @map("entity_type") @db.Text
+  entityId    String   @map("entity_id") @db.Text
+  action      String   @db.Text
+  beforeData  Json?    @map("before_data") @db.JsonB
+  afterData   Json?    @map("after_data") @db.JsonB
+  metadata    Json?    @db.JsonB
+  occurredAt  DateTime @default(now()) @map("occurred_at") @db.Timestamptz(6)
+  actor       User?    @relation("AuditActor", fields: [actorUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@index([occurredAt])
+  @@index([entityType, entityId, occurredAt])
+  @@index([actorUserId, occurredAt])
+  @@map("audit_logs")
+}
+
+model HackathonSummary {
+  id              BigInt   @id @default(autoincrement())
+  createdByUserId BigInt?  @map("created_by_user_id")
+  title           String?  @db.Text
+  summaryData     Json     @map("summary_data") @db.JsonB
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  createdBy       User?    @relation("SummaryCreator", fields: [createdByUserId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@index([createdAt])
+  @@map("hackathon_summaries")
+}
