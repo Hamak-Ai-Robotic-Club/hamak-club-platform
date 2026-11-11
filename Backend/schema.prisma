@@ -11,6 +11,7 @@ model Component {
   name            String              @db.Text
   category        String              @db.Text
   description     String?             @db.Text
+  imageReference  String?             @map("image_reference") @db.Text
   workingQuantity Int                 @map("working_quantity")
   brokenQuantity  Int                 @map("broken_quantity")
   status          String              @db.Text
