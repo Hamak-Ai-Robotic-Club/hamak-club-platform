@@ -1,0 +1,38 @@
+# Hardware photo credits
+
+- `arduino.jpg` — SparkFun Electronics, [Arduino Uno - R3](https://commons.wikimedia.org/wiki/File:Arduino_Uno_-_R3.jpg), licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `ultrasonic.jpg` — SparkFun, [HC-SR04 Ultrasonic Sensor](https://commons.wikimedia.org/wiki/File:SparkFun_HC-SR04_Ultrasonic-Sensor_13959-01a.jpg), licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `raspberry-pi.jpg` — Laserlicht, [Raspberry Pi 4 Model B - Top](https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Top.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `esp32-board.jpg` — Edwiyanto, [ESP32 Dev Board](https://commons.wikimedia.org/wiki/File:ESP32_Dev_Board.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `breadboard.jpg` — oomlout, [400 points breadboard](https://commons.wikimedia.org/wiki/File:400_points_breadboard.jpg), licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+- `micro-usb.jpg` — Tobiasfalk42, [Micro USB Cable Plug](https://commons.wikimedia.org/wiki/File:Micro_USB_Cable_Plug.tif), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `usb-ab-cable.jpg` — oomlout, [A-B Usb Cable](https://commons.wikimedia.org/wiki/File:A-B_Usb_Cable.jpg), licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+- `jumper-wires.jpg` — oomlout, [Jumper Wires with Crocodile Clips](https://commons.wikimedia.org/wiki/File:Jumper_Wires_with_Crocodile_Clips.jpg), licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+- `lcd-1602.jpg` — Retired electrician, [MELT 16x2 LCD alphanumeric display 07](https://commons.wikimedia.org/wiki/File:MELT_16x2_LCD_alphanumeric_display_07(DXO).jpg), licensed under CC0.
+- `potentiometer.jpg` — Iainf, [Potentiometer](https://commons.wikimedia.org/wiki/File:Potentiometer.jpg), licensed under [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/).
+- `dht11.jpg` — Edwiyanto, [Dht11](https://commons.wikimedia.org/wiki/File:Dht11.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `rfid-rc522.jpg` — Goga504, [RFID module RC522](https://commons.wikimedia.org/wiki/File:RFID_module_RC522.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `relay-module.jpg` — Suyash Dwivedi, [SRD-05VDC-SL-C 5V one-channel relay module](https://commons.wikimedia.org/wiki/File:SRD-05VDC-SL-C_5V_one-channel_relay_module.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `servo-sg90.jpg` — Suyash Dwivedi, [Tower Pro SG90 micro servo motor](https://commons.wikimedia.org/wiki/File:Tower_Pro_SG90_micro_servo_motor.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `stepper-motor.jpg` — Kushagra Keshari, [28BYJ-48 unipolar stepper motor with ULN2003 driver](https://commons.wikimedia.org/wiki/File:28BYJ-48_unipolar_stepper_motor_with_ULN2003_driver.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `stepper-driver.jpg` — Kushagra Keshari, [ULN2003 unipolar stepper motor driver module](https://commons.wikimedia.org/wiki/File:ULN2003_unioplar_stepper_motor_driver_module.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `keypad.JPG` — Wassily, [Numpad](https://commons.wikimedia.org/wiki/File:Numpad.JPG), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- `joystick.jpg` — Evan-Amos, [Atari-2600-Joystick](https://commons.wikimedia.org/wiki/File:Atari-2600-Joystick.jpg), public domain.
+- `ir-remote.jpg` — Peter Hebels, [Remote infrared](https://commons.wikimedia.org/wiki/File:Remote_infrared.jpg), public domain.
+- `led-matrix-8x8.png` — Shahbaz75, [788BS 8x8 LED matrix](https://commons.wikimedia.org/wiki/File:788BS_8x8_led_matrix(8).png), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `seven-segment.jpg` — RetroEditor, [LED-7-Segment-Display](https://commons.wikimedia.org/wiki/File:LED-7-Segment-Display.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `rgb-led.png` — Mister rf, [5050 SMD RGB LED](https://commons.wikimedia.org/wiki/File:5050_SMD_RGB_LED.png), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `ldr.jpg` — Suyash Dwivedi, [25mm light-dependent resistor (LDR)](https://commons.wikimedia.org/wiki/File:25mm_light-dependent_resistor_(LDR)_(5).jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `pir-sensor.jpg` — Lethalattraction, [PIR-inexpensive](https://commons.wikimedia.org/wiki/File:PIR-inexpensive.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `gyro-sensor.jpg` — SparkFun, [Triple-Axis Gyro Breakout ITG-3200](https://commons.wikimedia.org/wiki/File:SparkFun_Triple-Axis-Gyro-Breakout_ITG-3200_11977-02.jpg), licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- `ir-receiver.jpg` — Raimond Spekking, [Toshiba Satellite 220CS PCB with IR receiver](https://commons.wikimedia.org/wiki/File:Toshiba_Satellite_220CS_-_PCB_with_status_LEDs,_IR_receiver,_USB_slot-91882.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `led.jpg` — Mister rf, [LED - 5mm Green](https://commons.wikimedia.org/wiki/File:LED_-_5mm_Green.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `resistor.jpg` — Evan-Amos, [Electronic Axial Lead Resistors 47kOhm](https://commons.wikimedia.org/wiki/File:Electronic_Axial_Lead_Resistors_47kOhm.jpg), licensed under CC0.
+- `electrolytic-capacitor.jpg` — FDominec, [Electronic component electrolytic capacitors](https://commons.wikimedia.org/wiki/File:Electronic_component_electrolytic_capacitors.jpg), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- `ceramic-capacitor.jpg` — Evan-Amos, [Electronic-Component-Ceramic-Capacitor](https://commons.wikimedia.org/wiki/File:Electronic-Component-Ceramic-Capacitor.jpg), public domain.
+- `push-button.jpg` — Scwerllguy, [Tactile switches](https://commons.wikimedia.org/wiki/File:Tactile_switches.jpg), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- `transistor.jpg` — Pxchanh, [Transistor - 1](https://commons.wikimedia.org/wiki/File:Transistor_-_1.jpg), licensed under CC0.
+- `timer-ic.jpg` — Swift.Hg, [NE555 DIP & SOIC](https://commons.wikimedia.org/wiki/File:NE555_DIP_%26_SOIC.jpg), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- `dc-motor-photo.jpg` — 1sfoerster, [Dc motors](https://commons.wikimedia.org/wiki/File:Dc_motors.jpg), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+- `microphone.jpg` — TubeTimeUS, [Cross section of an electret microphone element](https://commons.wikimedia.org/wiki/File:Cross_section_of_an_electret_microphone_element.jpg), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- `header-connector.jpg` — SparkFun Electronics, [10-pin female header](https://commons.wikimedia.org/wiki/File:Header_-_10-pin_Female_(SMD,_0.1%22)_(13413283463).jpg), licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
