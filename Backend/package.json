@@ -1,24 +1,27 @@
 {
-  "name": "escape-html",
-  "description": "Escape string for use in HTML",
-  "version": "1.0.3",
-  "license": "MIT",
-  "keywords": [
-    "escape",
-    "html",
-    "utility"
-  ],
-  "repository": "component/escape-html",
-  "devDependencies": {
-    "benchmark": "1.0.0",
-    "beautify-benchmark": "0.2.4"
-  },
-  "files": [
-    "LICENSE",
-    "Readme.md",
-    "index.js"
-  ],
+  "name": "hamak-inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "type": "module",
   "scripts": {
-    "bench": "node benchmark/index.js"
+    "dev": "nodemon",
+    "start": "node src/app.js",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.3",
+    "nodemon": "^3.1.14",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.2"
   }
 }
