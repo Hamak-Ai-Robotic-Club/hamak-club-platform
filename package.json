@@ -1,0 +1,29 @@
+{
+  "name": "hamak-logistics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HMK AI & Robotics Club \u2014 Hackathon logistics & inventory platform (React + Express + PostgreSQL/Prisma). Deploys to Vercel + Supabase.",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "postinstall": "prisma generate",
+    "build": "npm --prefix frontend install --no-audit --no-fund && npm --prefix frontend run build",
+    "dev:api": "node backend/src/server.js",
+    "dev:web": "npm --prefix frontend run dev",
+    "db:migrate": "prisma migrate deploy",
+    "db:create-user": "node backend/scripts/provision-user.js",
+    "test": "node --test backend/test/*.test.js"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "pg": "8.16.3",
+    "dotenv": "16.6.1"
+  },
+  "devDependencies": {
+    "prisma": "7.10.1"
+  }
+}
