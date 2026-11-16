@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Component {
+  id              BigInt              @id @default(autoincrement())
+  name            String              @db.Text
+  category        String              @db.Text
+  description     String?             @db.Text
+  workingQuantity Int                 @map("working_quantity")
+  brokenQuantity  Int                 @map("broken_quantity")
+  status          String              @db.Text
+  createdAt       DateTime            @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime            @updatedAt @map("updated_at") @db.Timestamptz(6)
+  movements       InventoryMovement[]
+
+  @@map("components")
+}
+
+model InventoryMovement {
+  id              BigInt    @id @default(autoincrement())
+  componentId     BigInt    @map("component_id")
+  movementType    String    @map("movement_type") @db.Text
+  quantityBucket  String    @map("quantity_bucket") @db.Text
+  quantityDelta   Int       @map("quantity_delta")
+  occurredAt      DateTime  @default(now()) @map("occurred_at") @db.Timestamptz(6)
+  notes           String?   @db.Text
+  component       Component @relation(fields: [componentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+
+  @@index([componentId, occurredAt])
+  @@map("inventory_movements")
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الخطة التنفيذية للفريق البرمجي | HMK AI & Robotics Club</title>
+<style>
+:root{--red:#e52d35;--dark:#171719;--muted:#65656d;--line:#dedee3;--soft:#f5f5f7;--pink:#fff0f1;--green:#14775a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#ededf0;color:#202024;font-family:Tahoma,Arial,sans-serif;line-height:1.85}
+.page{max-width:1120px;margin:26px auto;background:white;box-shadow:0 15px 55px #0001;overflow:hidden}
+header{background:var(--dark);color:#fff;padding:48px 7%;border-bottom:9px solid var(--red);position:relative}
+.brand{display:flex;align-items:center;gap:17px}.logo{width:78px;height:78px;display:grid;place-items:center;background:var(--red);border:4px solid white;box-shadow:6px 6px #000;font-weight:1000;font-size:23px;letter-spacing:-2px;clip-path:polygon(0 0,88% 0,100% 12%,100% 100%,12% 100%,0 88%)}.brand small{color:#ffadb2;letter-spacing:2px;font-weight:bold}
+header h1{font-size:clamp(28px,4vw,46px);line-height:1.4;margin:32px 0 12px}header p{max-width:850px;color:#e4e4e7;font-size:16px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.tag{font-size:12px;border:1px solid #ffffff50;padding:4px 9px;background:#ffffff0b}
+main{padding:32px 6% 58px}h2{font-size:24px;margin:44px 0 16px;padding:0 13px 9px 0;border-right:5px solid var(--red);border-bottom:1px solid var(--line)}h3{font-size:18px;margin:25px 0 8px}p{margin:9px 0}ul,ol{padding-right:24px}li{margin:5px 0}
+.intro,.callout{padding:16px 19px;border-radius:9px;margin:15px 0;border:1px solid var(--line)}.intro{background:var(--pink);border-right:5px solid var(--red)}.callout{border-right:5px solid var(--red)}.warning{background:#fffaf0;border-right-color:#d29a20}.success{background:#f3fbf7;border-right-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{border:1px solid var(--line);border-radius:13px;padding:17px;break-inside:avoid}.card h3{margin-top:0}
+table{width:100%;border-collapse:collapse;margin:13px 0 22px;font-size:13px}th,td{border:1px solid #dedee3;padding:9px 11px;text-align:right;vertical-align:top}th{background:#202024;color:white}tbody tr:nth-child(even){background:#f7f7f8}
+code,.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;text-align:left;font-family:Consolas,"Courier New",monospace}code{background:#f1f1f3;color:#a51e28;border:1px solid #e1e1e5;border-radius:4px;padding:1px 5px;font-size:.92em}pre{direction:ltr;text-align:left;unicode-bidi:embed;white-space:pre;overflow-x:auto;background:#19191d;color:#f4f4f5;border-radius:9px;padding:17px;font:13px/1.8 Consolas,monospace}pre code{display:inline;background:none;color:inherit;border:0;padding:0}
+.diagram{direction:ltr;overflow-x:auto;text-align:center;background:#fafafd;border:1px solid var(--line);border-radius:10px;padding:17px;margin:16px 0}.flow{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}.node{background:white;border:2px solid var(--red);border-radius:6px;padding:11px 13px;min-width:120px;font-weight:bold}.arrow{color:var(--red);font-size:22px;font-weight:bold}.note,.small{font-size:12px;color:var(--muted)}.pill{display:inline-block;background:#f0f0f2;padding:2px 7px;border-radius:4px;margin:2px;font-size:12px}.p0{color:#b91f28;font-weight:bold}.p1{color:#8a5a00;font-weight:bold}.check{list-style:none;padding:0}.check li{position:relative;padding-right:27px}.check li:before{content:"□";position:absolute;right:2px;color:var(--red);font-size:19px;top:-2px}.toc{columns:2;background:var(--soft);padding:18px 30px;border-radius:10px}.toc li{break-inside:avoid}
+footer{background:#19191d;color:#ddd;border-top:7px solid var(--red);padding:25px 6%;font-size:13px}footer strong{color:#ff9ca2}
+@media(max-width:700px){.page{margin:0}.grid{grid-template-columns:1fr}.toc{columns:1}header{padding:30px 6%}main{padding:22px 5% 40px}table{font-size:11px}th,td{padding:7px}.logo{width:62px;height:62px;font-size:19px}}
+@media print{body{background:white}.page{margin:0;max-width:none;box-shadow:none}header,th,footer,.logo{print-color-adjust:exact;-webkit-print-color-adjust:exact}h2{break-after:avoid}table,.card,.diagram,pre{break-inside:avoid}}
+</style>
+</head>
+<body><div class="page">
+<header>
+<div class="brand"><div class="logo">HMK</div><div><small>AI &amp; ROBOTICS CLUB</small><br>نادي الهمك للذكاء الصنعي والروبوتيك</div></div>
+<h1>الخطة التنفيذية والتنظيمية للفريق البرمجي</h1>
+<p>دليل موحّد لتوزيع المسؤوليات، وبناء المنصة، وتنظيم العمل باستخدام GitHub، وربط الواجهة والخادم وقاعدة البيانات ومساعد الذكاء الاصطناعي ضمن نظام واحد.</p>
+<div class="tags"><span class="tag">Frontend: React + Tailwind CSS</span><span class="tag">Backend: Node.js + Express</span><span class="tag">Database: PostgreSQL + Prisma</span><span class="tag">AI Chatbot</span><span class="tag">GitHub Monorepo</span></div>
+</header>
+<main>
+<div class="intro"><strong>هدف الوثيقة:</strong> تحويل فكرة المشروع إلى خطة قابلة للتنفيذ، بحيث يعرف كل عضو مسؤوليته، وكيف يبدأ من المستودع الأساسي، ويطوّر الميزات بالتوازي، ويراجع الكود ويدمجه ويختبره قبل النشر.<br><span class="small">الخطة التالية توصية تنظيمية. يجب تثبيت مزود نموذج الذكاء الاصطناعي وبعض التفاصيل التشغيلية قبل التنفيذ.</span></div>
+<h2>فهرس الوثيقة</h2><ol class="toc"><li>الهدف وطريقة بناء النظام</li><li>هيكل الفريق والمسؤوليات</li><li>بنية المستودع الموحد</li><li>تأسيس GitHub والفروع</li><li>دورة العمل باستخدام Git</li><li>عقد API والتكامل</li><li>توزيع مهام كل عضو</li><li>ربط Chatbot بالمخزون</li><li>قاعدة البيانات</li><li>مراحل تنفيذ الميزات</li><li>إدارة التاسكات</li><li>الاجتماعات والتواصل</li><li>القواعد التقنية</li><li>خطة الأسبوع الأول</li><li>قائمة تحقق المدير</li><li>قاموس المصطلحات</li></ol>
+
+<h2>01 — الهدف وطريقة بناء النظام</h2>
+<p>المنصة مخصصة لإدارة مخزون القطع الإلكترونية، وطلبات الفرق، والعهدة والتسليم والإرجاع، مع مساعد تقني موجّه للهاكاثون يقدم استشارات تقنية ويبحث في المخزون الفعلي ويقترح القطع المناسبة للأفكار.</p>
+<div class="grid">
+<div class="card"><h3>واجهة الفريق</h3><p>تسجيل الدخول، تصفح القطع العاملة وصورها وكمياتها المتاحة، إنشاء طلب يحتوي اسم المشروع وشرحه والقطع المطلوبة، متابعة الطلب والعهدة، واستخدام المساعد التقني.</p></div>
+<div class="card"><h3>واجهة الأدمن</h3><p>إدارة المخزون والصور والكميات، مراجعة الطلبات، تسجيل التسليم والإرجاع، إدارة الحسابات، متابعة التقارير وسجل التدقيق، وتصفير بيانات الهاكاثون بشروط صارمة.</p></div>
+<div class="card"><h3>Backend</h3><p>المكان المركزي للمصادقة والصلاحيات وقواعد العمل وحساب الكميات وإدارة الطلبات وتوفير واجهات API.</p></div>
+<div class="card"><h3>AI Chatbot</h3><p>مساعد تقني محدود النطاق، يستخدم أدوات قراءة محدودة لاسترجاع معلومات المخزون الحقيقية بدلاً من تخمينها.</p></div></div>
+<div class="callout"><strong>مبدأ معماري:</strong> النظام واحد، والواجهة لا تتصل بقاعدة البيانات مباشرة. تمر البيانات عبر Backend يتحقق من الصلاحيات ويطبق قواعد العمل، والمساعد لا يملك صلاحيات إدارية.</div>
+<div class="diagram"><div class="flow"><div class="node">Frontend<br>React UI</div><span class="arrow">→</span><div class="node">Backend<br>Express API</div><span class="arrow">→</span><div class="node">PostgreSQL</div></div><br><div class="flow"><div class="node">Chatbot UI</div><span class="arrow">→</span><div class="node">AI Service</div><span class="arrow">→</span><div class="node">Read-only Inventory Tools</div><span class="arrow">→</span><div class="node">Database</div></div></div>
+
+<h2>02 — هيكل الفريق والمسؤوليات</h2>
+<table><thead><tr><th>المسار</th><th>الأعضاء</th><th>المسؤولية الأساسية</th></tr></thead><tbody>
+<tr><td>إدارة المشروع والتكامل</td><td>مالك</td><td>الأولويات والمهام، المعمارية والتكامل، المصادقة والصلاحيات ودورة حياة الطلبات ومراجعة جاهزية الإصدار.</td></tr>
+<tr><td>Frontend</td><td>لجين، محمد</td><td>واجهات الفريق والأدمن والمحادثة وربطها بواجهات API.</td></tr>
+<tr><td>Backend</td><td>مالك، بتول، طارق</td><td>الخادم وقواعد العمل وواجهات API والتكامل مع قاعدة البيانات.</td></tr>
+<tr><td>AI</td><td>شهد، نهاد</td><td>سلوك المساعد، نطاق الإجابات، أدوات البحث في المخزون وتقييم التوصيات.</td></tr></tbody></table>
+<div class="callout warning"><strong>تنظيم المسؤولية:</strong> مالك مسؤول عن المعمارية والتكامل، لكنه ليس نقطة مرور إلزامية لكل قرار يومي. لكل مسار مسؤول واضح، وتوثّق القرارات المؤثرة على النظام كله.</div>
+<div class="grid">
+<div class="card"><h3>مالك — المعمارية والمصادقة</h3><ul><li>إعداد Express وبنية الخادم ومعالجة الأخطاء.</li><li>تسجيل الدخول والخروج والتحقق من كلمات المرور.</li><li>التحقق من دور <code>admin</code> أو <code>user</code> لكل مسار محمي.</li><li>إدارة الجلسات: جلسة نشطة واحدة لحساب الفريق، مع السماح للأدمن بعدة جلسات.</li><li>إنشاء الطلبات والتحقق من اسم المشروع وشرحه وبنوده.</li><li>قواعد قبول الطلب وحجز الكميات وحالات الطلبات.</li><li>مراجعة التكامل وPull Requests.</li></ul></div>
+<div class="card"><h3>بتول — المخزون والتسليم والإرجاع</h3><ul><li>API كتالوج القطع العاملة وصورها والكميات المتاحة.</li><li>إضافة القطع وتعديلها ورفع الصور والتحقق من الملفات.</li><li>قواعد تعديل المخزون وتعطيل القطع أو حذفها بشروط.</li><li>تسجيل التسليم والإرجاع الجزئيين.</li><li>تمييز الكميات المعادة سليمة أو عاطلة.</li><li>تسجيل حركات المخزون واختبار منع تجاوز الكميات.</li></ul></div>
+<div class="card"><h3>طارق — قاعدة البيانات والتقارير</h3><ul><li>مراجعة ERD والجداول والعلاقات والمفاتيح الخارجية.</li><li>إنشاء مخطط Prisma والترحيلات.</li><li>القيود وبيانات Seed التجريبية.</li><li>تنسيق سجلات حركات المخزون والتدقيق.</li><li>التقارير والإحصائيات.</li><li>حفظ ملخصات الهاكاثون قبل تصفير بيانات الفرق والطلبات.</li></ul></div>
+<div class="card"><h3>لجين — واجهة الفريق</h3><ul><li>واجهة تسجيل الدخول وحساب الفريق.</li><li>كتالوج القطع وصورها والكميات المتاحة.</li><li>نموذج الطلب: اسم المشروع وشرحه والقطع والكميات.</li><li>تأكيد الإرسال والتنبيه إلى عدم إمكانية تعديل الطلب بعد إرساله.</li><li>متابعة الطلبات وإلغاء الطلب عندما يكون مسموحاً.</li><li>صفحة العهدة المجمعة عبر طلبات الفريق.</li><li>المساهمة في واجهة المحادثة عند الحاجة.</li></ul></div>
+<div class="card"><h3>محمد — واجهة الأدمن</h3><ul><li>لوحة الأدمن وملخص المخزون والطلبات.</li><li>إدارة القطع والصور والكميات.</li><li>مراجعة الطلبات وعرض معلومات المشروع والقطع.</li><li>واجهات التسليم والإرجاع الجزئي.</li><li>إدارة الحسابات والتقارير.</li><li>واجهة تصفير البيانات مع التحذير والتأكيد والشروط.</li></ul></div>
+<div class="card"><h3>شهد — سلوك المساعد</h3><ul><li>تعريف نطاق المساعد ضمن الهاكاثون والمشاريع التقنية.</li><li>صياغة تعليمات النظام (System Instructions).</li><li>اقتراح أفكار مشاريع وتطويرها مع المستخدم.</li><li>معالجة الأسئلة الخارجة عن النطاق برسالة توجيه.</li><li>إعداد مجموعة أسئلة لتقييم جودة الإجابات.</li></ul></div>
+<div class="card"><h3>نهاد — أدوات المخزون والتوصية</h3><ul><li>تحديد بيانات القطع اللازمة للتوصية.</li><li>تصميم أدوات قراءة محدودة للبحث في المخزون.</li><li>التنسيق مع بتول حول بيانات القطع والكميات المتاحة.</li><li>مطابقة فكرة المشروع مع القطع الموجودة.</li><li>منع اختلاق أسماء القطع والكميات واختبار الحالات المختلفة.</li></ul></div></div>
+
+<h2>03 — بنية مستودع GitHub الموحد (Monorepo)</h2>
+<p>يعني <span class="ltr">Monorepo</span> أن أجزاء النظام موجودة في مستودع واحد، مع فصل واضح بين مجلدات الواجهة والخادم وقاعدة البيانات والوثائق. راجعوا المستودع الموجود في حساب النادي قبل إنشاء مستودع جديد.</p>
+<pre><code>hamak-inventory/
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── api/
+│       ├── components/
+│       ├── layouts/
+│       ├── pages/
+│       │   ├── auth/
+│       │   ├── user/
+│       │   ├── admin/
+│       │   └── chatbot/
+│       ├── hooks/
+│       ├── context/
+│       └── utils/
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── middleware/
+│   │   ├── modules/
+│   │   │   ├── auth/
+│   │   │   ├── users/
+│   │   │   ├── components/
+│   │   │   ├── requests/
+│   │   │   ├── inventory/
+│   │   │   ├── returns/
+│   │   │   ├── reports/
+│   │   │   └── ai/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   └── app.js
+│   └── tests/
+├── database/
+│   ├── schema.prisma
+│   ├── migrations/
+│   ├── seed.js
+│   └── README.md
+├── docs/
+│   ├── requirements.md
+│   ├── architecture.md
+│   ├── database-erd.md
+│   ├── api-contract.md
+│   ├── github-workflow.md
+│   └── ai-chatbot.md
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── pull_request_template.md
+├── .gitignore
+├── .env.example
+└── README.md</code></pre>
+<p><strong>مهم:</strong> الهيكل مقترح ويتوسع تدريجياً؛ لا يلزم إنشاء كل الملفات من أول يوم.</p>
+
+<h2>04 — تأسيس GitHub والفروع</h2>
+<ol><li>تأكدوا من رابط المستودع ومالكيه وصلاحياته.</li><li>أضيفوا أعضاء الفريق بصلاحيات تسمح بإنشاء الفروع ورفعها وفتح Pull Requests.</li><li>فعّلوا حماية الفرع المستقر <code>main</code> لمنع التعديل المباشر متى كانت إعدادات المستودع تسمح بذلك.</li><li>جهّزوا <code>README.md</code> و<code>.gitignore</code> و<code>.env.example</code> والوثائق الأولية.</li></ol>
+<table><thead><tr><th>الفرع</th><th>الغرض</th><th>القاعدة</th></tr></thead><tbody><tr><td><code>main</code></td><td>نسخة مستقرة جاهزة للنشر.</td><td>لا تعديل مباشر؛ الدمج بعد المراجعة والاختبارات.</td></tr><tr><td><code>develop</code></td><td>تجميع الميزات قبل الإصدار.</td><td>تدخل إليه الميزات عبر Pull Requests.</td></tr></tbody></table>
+<div class="diagram"><div class="flow"><div class="node">feature branch</div><span class="arrow">→</span><div class="node">develop</div><span class="arrow">→</span><div class="node">main</div></div><p class="note">تُطوّر الميزة على فرع مستقل، ثم تُراجع وتُدمج في develop، وبعد الاختبار تُنقل إلى main.</p></div>
+<h3>أمثلة أسماء الفروع</h3><pre><code>feature/login
+feature/inventory-management
+feature/request-form
+feature/request-workflow
+feature/chatbot-ui
+feature/ai-inventory-tools
+
+fix/request-validation
+docs/api-contract</code></pre>
+<ul><li><code>feature/</code> لإضافة ميزة.</li><li><code>fix/</code> لإصلاح مشكلة.</li><li><code>docs/</code> لتعديل الوثائق.</li></ul>
+
+<h2>05 — دورة العمل اليومية باستخدام Git</h2>
+<p>مثال: محمد يعمل على واجهة إدارة المخزون.</p>
+<h3>1. تحديث develop</h3><pre><code>git switch develop
+git pull origin develop</code></pre>
+<h3>2. إنشاء فرع</h3><pre><code>git switch -c feature/inventory-management</code></pre>
+<h3>3. فحص التغييرات</h3><pre><code>git status
+git diff</code></pre>
+<h3>4. حفظ Commit</h3><pre><code>git add frontend/
+git commit -m "feat(frontend): add inventory management UI"</code></pre>
+<h3>5. رفع الفرع</h3><pre><code>git push -u origin feature/inventory-management</code></pre>
+<h3>6. فتح Pull Request</h3><p>يفتح محمد PR من <code>feature/inventory-management</code> إلى <code>develop</code> ويشرح ما أضافه وكيف اختبره، ويذكر أي اعتماد على API غير جاهز.</p>
+<h3>7. المراجعة والدمج</h3><p>يراجع عضو آخر التغيير ويتأكد من نجاح الاختبارات وعدم كسر أجزاء موجودة. لا تعتبر المهمة منتهية بمجرد رفع الفرع.</p>
+<div class="callout warning"><strong>Merge Conflict:</strong> تعارض تغييرات يتطلب مراجعة يدوية عند تداخل تعديلات الأعضاء. لا تختاروا نسخة أحدهم عشوائياً. قللوا التعارض بتقسيم الواجهات إلى ملفات مستقلة والاتفاق على الملفات المشتركة مسبقاً.</div>
+
+<h2>06 — عقد API: الاتفاق الذي يربط الفرق</h2>
+<p>قبل تنفيذ الميزة نفسها في الواجهة والخادم، اتفقوا على المسار ونوع الطلب والبيانات والصلاحيات والاستجابة والأخطاء. يمكن لكل فريق العمل بالتوازي باستخدام بيانات تجريبية مطابقة للعقد.</p>
+<table><thead><tr><th>العنصر</th><th>ما يجب توثيقه</th></tr></thead><tbody><tr><td>Method</td><td><code>GET</code> أو <code>POST</code> أو <code>PATCH</code> أو <code>DELETE</code>.</td></tr><tr><td>Path</td><td>عنوان المسار، مثل <code>/api/components</code>.</td></tr><tr><td>Authentication</td><td>هل يتطلب تسجيل الدخول؟</td></tr><tr><td>Authorization</td><td>هل يسمح به لحساب فريق أم للأدمن فقط؟</td></tr><tr><td>Request</td><td>البيانات المرسلة والحقول المطلوبة.</td></tr><tr><td>Response</td><td>شكل البيانات المستقبلة.</td></tr><tr><td>Errors</td><td>الأخطاء المتوقعة وأكواد HTTP.</td></tr></tbody></table>
+<h3>مثال: عرض القطع</h3><pre><code>GET /api/components
+
+{
+  "items": [
+    {
+      "id": "component-123",
+      "name": "ESP32 DevKit",
+      "imageUrl": "/images/esp32.jpg",
+      "availableQuantity": 8
+    }
+  ]
+}</code></pre>
+<p>توثّق المسارات في <code>docs/api-contract.md</code>، وتُحدّث الوثيقة كلما تغير العقد المتفق عليه.</p>
+
+<h2>07 — توزيع مهام كل عضو</h2>
+<h3>Backend — مالك</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>إعداد الخادم</td><td>Express والإعدادات ومعالجة الأخطاء.</td><td class="p0">P0</td></tr><tr><td>المصادقة</td><td>تسجيل الدخول والخروج والتحقق من كلمات المرور.</td><td class="p0">P0</td></tr><tr><td>الصلاحيات</td><td>التحقق من دور الحساب في كل مسار محمي.</td><td class="p0">P0</td></tr><tr><td>الجلسات</td><td>جلسة نشطة واحدة للفريق؛ جلسات متعددة للأدمن.</td><td class="p0">P0</td></tr><tr><td>الطلبات</td><td>إنشاء الطلب مع اسم المشروع وشرحه والتحقق من البيانات.</td><td class="p0">P0</td></tr><tr><td>قواعد الطلب</td><td>طلب Pending واحد للفريق، ومنع التعديل بعد الإرسال.</td><td class="p0">P0</td></tr><tr><td>القبول والحجز</td><td>قبول الطلب وحجز الكميات والتحقق من توفرها.</td><td class="p0">P0</td></tr><tr><td>التكامل</td><td>مراجعة PRs وتوافق الوحدات.</td><td>مستمر</td></tr></tbody></table>
+<h3>Backend — بتول</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>كتالوج القطع</td><td>عرض القطع العاملة والصور والكميات المتاحة.</td><td class="p0">P0</td></tr><tr><td>إضافة وتعديل</td><td>الاسم والتصنيف والوصف والكميات والتحقق.</td><td class="p0">P0</td></tr><tr><td>الصور</td><td>رفع الصور والتحقق من نوعها وحجمها وتخزين الرابط.</td><td class="p0">P0</td></tr><tr><td>الحذف والتعطيل</td><td>الحذف إذا لم توجد سجلات تاريخية؛ وإلا تعطيل القطعة.</td><td class="p0">P0</td></tr><tr><td>التسليم</td><td>تسجيل الكميات المسلّمة ودعم التسليم الجزئي.</td><td class="p0">P0</td></tr><tr><td>الإرجاع</td><td>تسجيل الكميات المعادة سليمة أو عاطلة.</td><td class="p0">P0</td></tr><tr><td>حركات المخزون</td><td>تسجيل التعديلات والتسليم والإرجاع.</td><td class="p1">P1</td></tr></tbody></table>
+<h3>Backend / Database — طارق</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>ERD</td><td>الجداول والعلاقات والمفاتيح الخارجية.</td><td class="p0">P0</td></tr><tr><td>Prisma</td><td>المخطط والترحيلات.</td><td class="p0">P0</td></tr><tr><td>قيود البيانات</td><td>العلاقات والقيم الفريدة والقيود المناسبة.</td><td class="p0">P0</td></tr><tr><td>Seed</td><td>بيانات تجريبية للتطوير والاختبار.</td><td class="p0">P0</td></tr><tr><td>السجلات</td><td>حركات المخزون وسجل التدقيق.</td><td class="p0">P0</td></tr><tr><td>التقارير</td><td>إحصائيات المخزون والطلبات والحركات.</td><td class="p1">P1</td></tr><tr><td>تصفير البيانات</td><td>حفظ الملخصات قبل حذف بيانات الفرق والطلبات.</td><td class="p1">P1</td></tr></tbody></table>
+<h3>Frontend — لجين</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>تسجيل الدخول</td><td>النموذج ورسائل الخطأ.</td><td class="p0">P0</td></tr><tr><td>واجهة الفريق</td><td>توجيه الحساب إلى الواجهة المناسبة.</td><td class="p0">P0</td></tr><tr><td>الكتالوج</td><td>الصور والكميات المتاحة والقطع العاملة.</td><td class="p0">P0</td></tr><tr><td>نموذج الطلب</td><td>اسم المشروع وشرحه والقطع والكميات.</td><td class="p0">P0</td></tr><tr><td>تأكيد الإرسال</td><td>توضيح أن الطلب لا يمكن تعديله بعد الإرسال.</td><td class="p0">P0</td></tr><tr><td>متابعة الطلب</td><td>الحالة والإلغاء عندما يكون مسموحاً.</td><td class="p0">P0</td></tr><tr><td>العهدة</td><td>القطع المسلّمة وغير المعادة عبر كل الطلبات.</td><td class="p0">P0</td></tr><tr><td>Chatbot UI</td><td>المساهمة بواجهة المحادثة عند الحاجة.</td><td class="p1">P1</td></tr></tbody></table>
+<h3>Frontend — محمد</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>لوحة الأدمن</td><td>ملخص المخزون والطلبات.</td><td class="p0">P0</td></tr><tr><td>إدارة المخزون</td><td>عرض القطع والصور والكميات والإضافة والتعديل.</td><td class="p0">P0</td></tr><tr><td>إدارة الطلبات</td><td>عرض الحالات وتفاصيل المشروع والقطع.</td><td class="p0">P0</td></tr><tr><td>التسليم والإرجاع</td><td>إدخال الكميات المسلّمة والمعادة وحالتها.</td><td class="p0">P0</td></tr><tr><td>الحسابات</td><td>الإدارة والتجميد وإعادة تعيين كلمة المرور.</td><td class="p1">P1</td></tr><tr><td>التقارير</td><td>إحصائيات المخزون والحركات والطلبات.</td><td class="p1">P1</td></tr><tr><td>تصفير البيانات</td><td>واجهة التأكيد وشروط التنفيذ.</td><td class="p1">P1</td></tr></tbody></table>
+<h3>AI — شهد</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>نطاق المساعد</td><td>أنواع الأسئلة المسموحة ضمن الهاكاثون والمشاريع التقنية.</td><td class="p0">P0</td></tr><tr><td>تعليمات النظام</td><td>توجيه النموذج إلى النطاق والسلوك المطلوب.</td><td class="p0">P0</td></tr><tr><td>الخروج عن النطاق</td><td>توجيه المستخدم للموضوعات المناسبة.</td><td class="p0">P0</td></tr><tr><td>توليد الأفكار</td><td>اقتراح أفكار مشاريع وتطويرها.</td><td class="p1">P1</td></tr><tr><td>التقييم</td><td>اختبار الجودة والالتزام بالنطاق.</td><td class="p1">P1</td></tr></tbody></table>
+<h3>AI — نهاد</h3><table><thead><tr><th>المهمة</th><th>التفاصيل</th><th>الأولوية</th></tr></thead><tbody>
+<tr><td>بيانات التوصية</td><td>تحديد بيانات القطع اللازمة للتوصية.</td><td class="p0">P0</td></tr><tr><td>أدوات المخزون</td><td>أدوات قراءة محدودة للبحث في القطع المتاحة.</td><td class="p0">P0</td></tr><tr><td>التكامل</td><td>الاتفاق مع بتول على البيانات واحتساب المتاح.</td><td class="p0">P0</td></tr><tr><td>توصية القطع</td><td>مطابقة فكرة المشروع مع القطع الموجودة.</td><td class="p1">P1</td></tr><tr><td>منع الاختلاق</td><td>القطع والكميات مصدرها نتائج قاعدة البيانات.</td><td class="p0">P0</td></tr><tr><td>الاختبار</td><td>المخزون الفارغ والأخطاء والقطع غير المتوفرة.</td><td class="p1">P1</td></tr></tbody></table>
+
+<h2>08 — ربط Chatbot بالمخزون</h2>
+<p>المساعد نموذج لغوي يستخدم أدوات محدودة من Backend لاسترجاع معلومات حقيقية؛ لا نعتمد على ذاكرته لتخمين القطع المتوفرة.</p>
+<div class="diagram"><div class="flow"><div class="node">المستخدم</div><span class="arrow">→</span><div class="node">Chatbot UI</div><span class="arrow">→</span><div class="node">AI Service<br>Backend</div><span class="arrow">→</span><div class="node">Inventory Tool</div><span class="arrow">→</span><div class="node">PostgreSQL</div></div><p>تعود النتائج إلى الخدمة، ثم يصوغ النموذج التوصية اعتماداً على المعلومات الفعلية.</p></div>
+<h3>مثال أداة البحث</h3><pre><code>search_available_components
+
+{
+  "keywords": ["temperature", "humidity"],
+  "requiredCapabilities": ["wireless connectivity"]
+}</code></pre>
+<ul><li>يجب التفريق بين العدد الإجمالي والعامل والمحجوز والمتاح.</li><li>المساعد للقراءة والاستشارة فقط، ولا يغيّر المخزون أو يعتمد الطلبات.</li><li>مفتاح مزود الذكاء الاصطناعي يبقى في متغيرات بيئة الخادم، ولا يُرسل للمتصفح.</li></ul>
+<p>يُفضّل وضع المساعد ضمن <code>backend/src/modules/ai/</code> بدلاً من إنشاء خادم مستقل في البداية:</p><pre><code>backend/src/modules/ai/
+├── ai.routes.js
+├── ai.controller.js
+├── ai.service.js
+├── ai.tools.js
+└── ai.prompts.js</code></pre>
+
+<h2>09 — قاعدة البيانات والتعديلات عليها</h2>
+<table><thead><tr><th>الجدول</th><th>الغرض</th></tr></thead><tbody>
+<tr><td><code>users</code></td><td>حسابات الفرق والأدمن.</td></tr><tr><td><code>sessions</code></td><td>الجلسات النشطة والمنتهية.</td></tr><tr><td><code>components</code></td><td>بيانات القطع وصورها وكمياتها وحالتها.</td></tr><tr><td><code>requests</code></td><td>الطلبات واسم المشروع وشرحه وحالتها.</td></tr><tr><td><code>request_items</code></td><td>القطع والكميات المطلوبة داخل كل طلب.</td></tr><tr><td><code>returns</code></td><td>عمليات الإرجاع.</td></tr><tr><td><code>return_items</code></td><td>الكميات المعادة وحالتها.</td></tr><tr><td><code>inventory_movements</code></td><td>سجل حركة المخزون.</td></tr><tr><td><code>audit_logs</code></td><td>العمليات الإدارية والأمنية المهمة.</td></tr><tr><td><code>hackathon_summaries</code></td><td>الإحصائيات التي تبقى بعد تصفير بيانات الهاكاثون.</td></tr></tbody></table>
+<p>يمكن إضافة جداول للمحادثات إذا تقرر حفظ سجل Chatbot. يجب تحديد سياسة حفظ البيانات قبل التنفيذ.</p>
+<div class="diagram"><div class="flow"><div class="node">Frontend</div><span class="arrow">→</span><div class="node">Backend API</div><span class="arrow">→</span><div class="node">Prisma</div><span class="arrow">→</span><div class="node">PostgreSQL</div></div></div>
+<ul><li>لا تتصل الواجهة بقاعدة البيانات مباشرة.</li><li>أي تعديل في المخطط ينعكس في <code>schema.prisma</code> وملفات <code>migrations/</code>.</li><li>يتفق طارق مع صاحب الميزة قبل إضافة حقل جديد، ثم يُنشئ Migration واضحة.</li><li>لا تعدّلوا قاعدة البيانات يدوياً من دون تحديث الترحيلات.</li><li>استخدموا Seed لبيانات التطوير والاختبار، لا بيانات حقيقية.</li></ul>
+
+<h2>10 — خطة تنفيذ الميزات حسب الاعتماديات</h2>
+<h3>المرحلة 0: التأسيس والتصميم</h3><table><thead><tr><th>المهمة</th><th>المسؤولون</th><th>المخرج</th></tr></thead><tbody><tr><td>المستودع والفروع والصلاحيات</td><td>مالك</td><td>مستودع منظم</td></tr><tr><td>التقنيات والإصدارات</td><td>مالك + طارق</td><td>وثيقة قرارات تقنية</td></tr><tr><td>Prisma وPostgreSQL</td><td>طارق</td><td>قاعدة أولية</td></tr><tr><td>React وTailwind</td><td>لجين + محمد</td><td>واجهة تعمل محلياً</td></tr><tr><td>Express</td><td>مالك</td><td>خادم أولي</td></tr><tr><td>API Contract</td><td>مالك + بتول + طارق + Frontend</td><td>وثيقة عقد</td></tr><tr><td>نطاق المساعد وأدواته</td><td>شهد + نهاد</td><td>وثيقة تصميم AI</td></tr></tbody></table>
+<h3>المرحلة 1: المصادقة والصلاحيات</h3><ul><li>مالك: تسجيل الدخول والجلسات والصلاحيات.</li><li>طارق: جداول المستخدمين والجلسات.</li><li>لجين: واجهة تسجيل الدخول وواجهة الفريق.</li><li>محمد: الهيكل الأولي للوحة الأدمن.</li><li>شهد ونهاد: تصميم المساعد دون دمج النموذج بعد.</li></ul><p><strong>معيار الإنجاز:</strong> يدخل الفريق إلى واجهته والأدمن إلى لوحته، ويرفض الخادم API غير المصرح بها، وتُطبق قاعدة الجلسة النشطة الواحدة للفريق.</p>
+<h3>المرحلة 2: كتالوج المخزون</h3><ul><li>بتول: API المخزون والإضافة والتعديل والصور.</li><li>طارق: الجداول والترحيلات والقيود.</li><li>لجين: كتالوج الفريق.</li><li>محمد: إدارة المخزون.</li><li>مالك: مراجعة الصلاحيات والتكامل.</li><li>نهاد: تحديد بيانات المخزون اللازمة للمساعد.</li></ul><p><strong>معيار الإنجاز:</strong> إضافة قطعة بصورتها وتعديلها وفق القواعد، وإظهار القطع العاملة والكميات المتاحة للمستخدم، ومنع تعديل يتعارض مع الحجز.</p>
+<h3>المرحلة 3: الطلبات والمشاريع</h3><ul><li>مالك: API الطلبات وقواعد العمل.</li><li>طارق: مخطط الطلب وبنوده والقيود.</li><li>لجين: نموذج الطلب ومتابعة الحالة.</li><li>محمد: واجهة مراجعة الطلبات.</li><li>بتول: بيانات المخزون للتحقق.</li></ul><p><strong>معيار الإنجاز:</strong> يحتوي كل طلب على اسم المشروع وشرحه الخاص به وعدة أنواع من القطع؛ لا يعدّل بعد الإرسال؛ طلب Pending واحد كحد أقصى لكل فريق؛ يمكن إلغاؤه قبل المراجعة؛ ولا يتم الحجز عند الإرسال.</p>
+<h3>المرحلة 4: القبول والحجز والتسليم والإرجاع</h3><ul><li>مالك: القبول والحجز وتغيير الحالات.</li><li>بتول: التسليم والإرجاع الجزئي.</li><li>طارق: السجلات والقيود والتقارير.</li><li>لجين: الطلبات والعهدة.</li><li>محمد: واجهات المراجعة والتسليم والإرجاع.</li></ul><p><strong>معيار الإنجاز:</strong> القبول يحجز الكميات؛ الرفض يحرر الحجز؛ التسليم الفعلي يخصم المخزون؛ التسليم والإرجاع الجزئيان مدعومان؛ وتُسجل القطع المعادة سليمة أو عاطلة.</p>
+<h3>المرحلة 5: المساعد التقني</h3><ul><li>شهد: تعليمات النظام والنطاق وتوليد الأفكار.</li><li>نهاد: أدوات البحث وتنسيق بيانات التوصية.</li><li>مالك: مراجعة التكامل والصلاحيات.</li><li>بتول: خدمة حساب المتاح.</li><li>لجين: واجهة المحادثة.</li><li>محمد: عرض القطع المقترحة بصورها.</li></ul><p><strong>معيار الإنجاز:</strong> استشارات ضمن النطاق، أفكار مشاريع، بحث فعلي في المخزون، عدم اختلاق قطع أو كميات، وعدم وجود صلاحيات تعديل أو اعتماد.</p>
+<h3>المرحلة 6: التقارير وتصفير البيانات</h3><ul><li>طارق: التقارير وحفظ الملخصات.</li><li>مالك: شروط التصفير والصلاحيات.</li><li>بتول: مراجعة الكميات والحركات النهائية.</li><li>محمد: واجهة التقارير والتصفير.</li><li>لجين: التأكد من عدم ظهور بيانات الفرق بعد التصفير.</li></ul><p><strong>معيار الإنجاز:</strong> لا يتم التصفير مع عهد مفتوحة أو مستحقات غير مسوّاة؛ يتطلب صلاحية أدمن وتأكيداً صريحاً؛ تحفظ إحصائيات القطع المعادة سليمة وعاطلة؛ وتبقى بيانات المخزون وصوره وإحصائياته. تختبر العملية على قاعدة تجريبية أولاً.</p>
+
+<h2>11 — إدارة التاسكات عبر GitHub</h2>
+<h3>Issue لكل مهمة</h3><p>مثال: <strong>بناء API إضافة قطعة إلى المخزون</strong>.</p><ul><li><strong>Assignee:</strong> بتول.</li><li><strong>Labels:</strong> <code>backend</code>، <code>inventory</code>، <code>P0</code>.</li><li><strong>Description:</strong> المطلوب وما هو خارج نطاق المهمة.</li><li><strong>Acceptance Criteria:</strong> شروط قبول المهمة.</li><li><strong>Dependencies:</strong> مخطط قاعدة البيانات وعقد API.</li></ul>
+<p>مثال موازٍ: <strong>بناء نموذج إضافة قطعة</strong> — المسؤول محمد، والوسوم <code>frontend</code> و<code>inventory</code> و<code>P0</code>، والاعتماد عقد API.</p>
+<h3>قسّموا الميزات الكبيرة إلى مهام صغيرة</h3><ol><li>تصميم جدول القطع.</li><li>تنفيذ API عرض القطع.</li><li>تنفيذ API إضافة قطعة.</li><li>تنفيذ API تعديل قطعة.</li><li>تنفيذ رفع الصور.</li><li>بناء واجهة عرض القطع.</li><li>بناء واجهة الإضافة والتعديل.</li><li>اختبار التكامل.</li></ol>
+<p>Labels موحدة: <span class="pill">frontend</span><span class="pill">backend</span><span class="pill">database</span><span class="pill">ai</span><span class="pill">docs</span><span class="pill">bug</span><span class="pill">security</span><span class="pill">P0</span><span class="pill">P1</span><span class="pill">P2</span></p>
+<h3>قالب Pull Request</h3><ul class="check"><li>ما الذي تغيّر؟</li><li>لماذا نحتاج إلى التغيير؟</li><li>ما الاختبارات التي أجريت؟</li><li>هل تغيرت قاعدة البيانات؟</li><li>هل تغير عقد API؟</li><li>هل توجد صور توضح الواجهة؟</li><li>هل توجد مهام تعتمد على هذا التغيير؟</li></ul>
+
+<h2>12 — الاجتماعات والتواصل</h2><div class="grid">
+<div class="card"><h3>اجتماع تخطيط أسبوعي</h3><ul><li>ما الذي أُنجز؟</li><li>ما الذي سينجز الأسبوع القادم؟</li><li>ما العوائق؟</li><li>ما الميزات التي تعتمد على بعضها؟</li></ul></div>
+<div class="card"><h3>اجتماع تقني عند الحاجة</h3><p>مثل اجتماع بتول ومحمد لتثبيت عقد API المخزون، أو نهاد وبتول لتحديد بيانات التوصيات.</p></div>
+<div class="card"><h3>تحديث المهام</h3><p>حدّثوا الحالة عند بدء العمل، أو فتح PR، أو انتظار المراجعة، أو الدمج، أو ظهور عائق.</p></div>
+<div class="card"><h3>توثيق القرارات</h3><p>أي قرار يؤثر في المعمارية أو API أو قاعدة البيانات يوثّق داخل المستودع، ولا يبقى في الدردشة فقط.</p></div></div>
+
+<h2>13 — قواعد تقنية مشتركة</h2><ol>
+<li><strong>لا أسرار في GitHub:</strong> لا ترفعوا ملفات <code>.env</code> الحقيقية أو كلمات المرور أو مفاتيح API. ارفعوا <code>.env.example</code> بأسماء المتغيرات فقط.</li>
+<li><strong>لا تعديل مباشر على main:</strong> كل ميزة تمر بفروع وPull Requests ومراجعة.</li>
+<li><strong>مصدر موحد لقاعدة البيانات:</strong> مخطط Prisma والترحيلات مرجع الفريق.</li>
+<li><strong>الخادم مسؤول عن الصلاحيات:</strong> إخفاء صفحة الأدمن لا يمنع استدعاء API مباشرة.</li>
+<li><strong>التعامل مع التزامن:</strong> إذا حاول فريقان حجز آخر قطعتين، يجب ألا يتجاوز الحجز المخزون؛ استخدموا معاملات قاعدة بيانات وعمليات تحقق مناسبة.</li>
+<li><strong>صلاحيات Chatbot محدودة:</strong> أدوات قراءة للمخزون فقط؛ لا حذف ولا تعديل ولا اعتماد طلبات.</li>
+<li><strong>كل ميزة لها اختبارات:</strong> نجاح السيناريو، مدخلات خاطئة، صلاحيات، حالات حدودية وتكامل.</li>
+<li><strong>المخزون لا يُحسب في الواجهة:</strong> الحساب النهائي للكميات المتاحة والمحجوزة يتم في Backend.</li></ol>
+
+<h2>14 — خطة تنفيذ عملية للأسبوع الأول</h2><table><thead><tr><th>اليوم</th><th>العمل</th><th>المسؤولون</th><th>الناتج</th></tr></thead><tbody>
+<tr><td>1</td><td>مراجعة المستودع وضبط الصلاحيات والفروع.</td><td>مالك</td><td>مستودع منظم.</td></tr><tr><td>1</td><td>تثبيت قواعد العمل والأولويات.</td><td>مالك + قادة المسارات</td><td>قائمة مهام.</td></tr><tr><td>1–2</td><td>إنشاء هيكل الواجهة والخادم.</td><td>لجين + محمد + مالك</td><td>تطبيق أولي محلي.</td></tr><tr><td>1–2</td><td>تصميم قاعدة البيانات والترحيلات.</td><td>طارق + مالك + بتول</td><td>قاعدة قابلة للتشغيل.</td></tr><tr><td>2</td><td>عقد API للمصادقة والمخزون والطلبات.</td><td>مالك + بتول + طارق</td><td>وثيقة API.</td></tr><tr><td>2–3</td><td>تسجيل الدخول والصلاحيات الأساسية.</td><td>مالك + طارق</td><td>API المصادقة.</td></tr><tr><td>2–3</td><td>هيكل واجهة الفريق والأدمن.</td><td>لجين + محمد</td><td>صفحات أولية.</td></tr><tr><td>2–3</td><td>تحديد نطاق المساعد وأمثلة الأسئلة.</td><td>شهد + نهاد</td><td>وثيقة AI.</td></tr><tr><td>4–5</td><td>تنفيذ كتالوج المخزون كأول ميزة متكاملة.</td><td>بتول + طارق + لجين + محمد</td><td>تكامل الواجهة والخادم والقاعدة.</td></tr><tr><td>نهاية الأسبوع</td><td>مراجعة الكود والمهام والعوائق.</td><td>الفريق كله</td><td>خطة الأسبوع التالي.</td></tr></tbody></table>
+<p class="small">المدة تقديرية بحسب وقت الأعضاء وخبرتهم. الأهم ترتيب الاعتماديات وإنجاز ميزة متكاملة، لا الالتزام بعدد أيام ثابت.</p>
+
+<h2>15 — قائمة تحقق لمدير المشروع</h2><ul class="check"><li>تثبيت المستودع الأساسي وهيكله والفروع والصلاحيات.</li><li>تثبيت قواعد حالات الطلب والحجز والتسليم والإرجاع والتصفير.</li><li>مراجعة ERD واعتماد الجداول والعلاقات قبل الترحيلات.</li><li>اعتماد API Contract حتى يعمل Frontend وBackend بالتوازي.</li><li>إنشاء Issues مرتبة حسب الأولوية، مع مسؤول ومعايير قبول.</li><li>تدريب الأعضاء على Branch وCommit وPush وPull Request.</li><li>تنفيذ أول ميزة متكاملة: كتالوج المخزون.</li><li>مراجعة الاختبارات قبل الدمج إلى develop.</li><li>التأكد من عدم وجود مفاتيح سرية أو بيانات حقيقية في المستودع.</li><li>تحديد سياسة حفظ محادثات Chatbot قبل التنفيذ.</li><li>اختبار تصفير البيانات على قاعدة تجريبية قبل اعتماد العملية.</li></ul>
+<div class="callout success"><strong>أهم توصية:</strong> لا تبدأوا جميع الميزات دفعة واحدة. ثبّتوا طريقة العمل، ثم أنجزوا كتالوج المخزون من قاعدة البيانات حتى الواجهة، وراجعوا ما تعلمتموه، وبعدها كرروا الدورة لبقية الميزات.</div>
+
+<h2>16 — قاموس مصطلحات أساسية</h2><table><thead><tr><th>المصطلح</th><th>المعنى العملي</th></tr></thead><tbody>
+<tr><td><span class="ltr">Repository / Repo</span></td><td>المستودع الذي يحفظ ملفات المشروع وتاريخ تغييراتها.</td></tr><tr><td><span class="ltr">Branch</span></td><td>مسار عمل مستقل لتطوير ميزة دون تعديل الفرع الأساسي مباشرة.</td></tr><tr><td><span class="ltr">Commit</span></td><td>حفظ مجموعة تغييرات برسالة توضحها.</td></tr><tr><td><span class="ltr">Push</span></td><td>رفع الفرع والتغييرات إلى GitHub.</td></tr><tr><td><span class="ltr">Pull</span></td><td>جلب التغييرات الجديدة من المستودع البعيد.</td></tr><tr><td><span class="ltr">Pull Request (PR)</span></td><td>طلب مراجعة ودمج تغييرات فرع في فرع آخر.</td></tr><tr><td><span class="ltr">Merge</span></td><td>دمج التغييرات في فرع مستهدف.</td></tr><tr><td><span class="ltr">Merge Conflict</span></td><td>تعارض يتطلب مراجعة يدوية عند تداخل التغييرات.</td></tr><tr><td><span class="ltr">API Contract</span></td><td>اتفاق موثق على المسارات والبيانات والصلاحيات والأخطاء.</td></tr><tr><td><span class="ltr">Migration</span></td><td>ملف يصف تغييراً منظماً في بنية قاعدة البيانات.</td></tr><tr><td><span class="ltr">Issue</span></td><td>مهمة أو مشكلة موثقة في GitHub لها مسؤول وحالة ومعايير قبول.</td></tr><tr><td><span class="ltr">Monorepo</span></td><td>مستودع واحد يحتوي على أجزاء متعددة من النظام.</td></tr></tbody></table>
+</main>
+<footer><strong>HMK AI &amp; Robotics Club</strong><br>الخطة التنظيمية للفريق البرمجي — وثيقة عمل داخلية قابلة للتحديث مع تطور المتطلبات.<br><span class="small" style="color:#bbb">راجعوا الوثائق وعقود API ومخطط قاعدة البيانات كلما تغيرت قواعد العمل. هذه الخطة لا تغني عن اختبارات الأمان والتكامل قبل النشر.</span></footer>
+</div></body></html>
